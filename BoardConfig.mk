@@ -30,12 +30,13 @@
 TARGET_OTA_ASSERT_DEVICE := d2vzw
 
 # Kernel
-TARGET_KERNEL_SOURCE        := kernel/samsung/d2
-TARGET_KERNEL_CONFIG        := cyanogen_d2vzw_defconfig
+#TARGET_KERNEL_SOURCE        := kernel/samsung/d2
+#TARGET_KERNEL_CONFIG        := cyanogen_d2vzw_defconfig
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31
 BOARD_KERNEL_BASE           := 0x80200000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81500000
 BOARD_KERNEL_PAGESIZE       := 2048
+TARGET_PREBUILT_KERNEL      := device/samsung/d2vzw/kernel
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
@@ -55,9 +56,9 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external_sdcard"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sdcard"
-#TW_NO_USB_STORAGE := true
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_NO_USB_STORAGE := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 BOARD_HAS_NO_REAL_SDCARD := true
